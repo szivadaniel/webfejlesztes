@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sziva Dániel">
+    <meta name="description" content="Fedezd fel a tenisz izgalmas világát! Információk, kvíz, érdekességek a sport szerelmeseinek!">
+    <meta name="copyright" content="Az oldal kizárólag oktatási célra készült!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Kepek/favicon.PNG" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sree+Krushnadevaraya&display=swap" rel="stylesheet">
+    <title>Tenisz - Főoldal</title>
+</head>
+<body>
+    <header>
+        <h1>"Tenisz nélkül lehet élni, de nem érdemes!"🎾</h1>
+    </header>
+
+    <div class="container">
+        <nav> 
+            <ul> 
+                <li><a class="active" href="#">Főoldal</a></li>
+                <li><a href="tortenet.html">Történet</a></li>
+                <li><a href="jatekosok.html">Híres játékosok</a></li>
+                <li><a href="shop.html">-Shop-</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <p class="focim">Lépj a pályára - Fedezd fel a teniszt! 🎾</p>
+            <h4 class="alcim">Kedves látogató!</h4>
+            <p class="tartalom"> A tenisz nem csupán sport, hanem egy életérzés, amely összeköti a mozgás örömét az eleganciával
+                és a kitartással. A weboldalon a kezdők és a profik egyaránt otthonra találhatnak: legyen szó a tenisz történetéről, a legnagyobb versenyek 
+                bemutatásáról, híres teniszezőkről vagy a legújabb felszerelések kiválasztásáról.</p>
+            <p class="tartalom"> Merül el a játék ritmusában, ismerd meg a szabályokat, fedezd fel a tenisz kultúráját és csatlakozz egy közösséghez, amelyet a sport szeretete köt össze!</p>
+        </article>
+
+        <aside>
+            <h2>Érdekesség!</h2>
+            <p class="side_info">A leghosszabb teniszmeccset 2010-ben játszották Wimbledonban, ahol John Isner és Nicolas Mahut 11 óra 5 percen keresztül játszottak, ami rekordnak számít
+               a sportág történetében. A mérkőzést végül John Isner nyerte meg 6-4, 3-6, 6-7, 7-6, 70-68-ra.</p>
+        </aside>
+
+        <aside class="jo_tudni">
+            <h2>Jó, ha tudod!</h2>
+            <p class="jo_tudni_szoveg"> Wimbledon az egyetlen Grand Slam, amely füves pályán zajlik. A hagyományok, a történelmi jelentőség és az elegancia mind hozzájárultak ahhoz, hogy Wimbledon a tenisz csúcsává vált. 
+               Évente több mint 500,000 látogató érkezik a híres londoni versenyre, amely 1877 óta kerül megrendezésre.</p>
+            <img src="Kepek/Wimbledon-Tennis-Stadium.png" id="jo_tudni_fenykep" alt="Wimbledon stadion">
+        </aside>
+
+        <article class="foelem">
+            <h3 id="kvizjatek_szin">KVÍZJÁTÉK!</h3>
+            <h4>Fedezd fel a tenisz izgalmas világát, és tudd meg, mennyire vagy jártas a sportban!</h4>
+            <p>Sok sikert kívánok!</p>
+            <hr id="kvizjatek_vonal">
+            <br>
+            <table class="kvizjatek_tablazat">
+                <tr>
+                    <td> 
+                        <p><span class="kerdesszam"> 1. kérdés:</span> Mi a neve annak a dobásnak, amellyel a tenisz mérkőzés kezdődik?</p>
+                        <p class="szabaly">Válaszd ki az egyetlen helyes választ!<br>
+                        <label><input type="checkbox" name="fu" id="helyes1">Szerva</label><br>
+                        <label><input type="checkbox" name="salak" id="helytelen1/1">Röpte</label><br>
+                        <label><input type="checkbox" name="beton" id="helytelen1/2">Fonák</label><br>
+                        <label><input type="checkbox" name="szonyeg" id="helytelen1/3">Leütés</label><br>
+                    </td>
+                    <td>
+                        <p><span class="kerdesszam"> 2. kérdés:</span> Milyen borítású teniszpályán játszanak Wimbledonban?</p>
+                        <p class="szabaly">Válaszd ki az egyetlen helyes választ!<br>
+                        <label><input type="checkbox" name="fu" id="helyes2">Fű</label><br>
+                        <label><input type="checkbox" name="salak" id="helytelen2/1">Salak</label><br>
+                        <label><input type="checkbox" name="beton" id="helytelen2/2">Beton</label><br>
+                        <label><input type="checkbox" name="szonyeg" id="helytelen2/3">Szőnyeg</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><span class="kerdesszam"> 3. kérdés:</span> Mi történik, ha a szerva közben a labda érinti a hálót, de átmegy a másik térfélre?</p>
+                        <label><input type="radio" name="halo" id="helytelen3/1">Pontot kap a szerváló</label><br>
+                        <label><input type="radio" name="halo" id="helytelen3/2">A szerváló elveszíti a pontot</label><br>
+                        <label><input type="radio" name="halo" id="helytelen3/3">Érvényes a Szerva</label><br>
+                        <label><input type="radio" name="halo" id="helyes3">Újra kell szerválni</label><br>
+                    </td>
+                    <td>
+                        <p><span class="kerdesszam"> 4. kérdés:</span> Hány nyert játszmára van szükség egy férfi Grand Slam döntő megnyeréséhez?</p>
+                        <input type="number" id="nyert_jatszma" min="0" max="10" step="1"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><span class="kerdesszam"> 5. kérdés:</span> Melyik híres magyar teniszező nyert Wimbledonban?</p>
+                        <label><input type="radio" name="hiresseg" id="helytelen5/1">Babos Tímea</label><br>
+                        <label><input type="radio" name="hiresseg" id="helytelen5/2">Fucsovics Márton</label><br>
+                        <label><input type="radio" name="hiresseg" id="helyes5">Asbóth József</label><br>
+                        <label><input type="radio" name="hiresseg" id="helytelen5/3">Taróczy Balázs</label><br>
+                    </td>
+
+                    <td>
+                        <p><span class="kerdesszam"> 6. kérdés:</span> Melyik teniszes torna volt az első, ahol bevezették az úgynevezett "tiebreak" szabályt a férfi és női egyéni versenyekben is?</p>
+                        <label><input type="radio" name="tiebreak" id="helytelen6/1">Wimbledon</label><br>
+                        <label><input type="radio" name="tiebreak" id="helyes6">US Open</label><br>
+                        <label><input type="radio" name="tiebreak" id="helytelen6/2">Roland Garros</label><br>
+                        <label><input type="radio" name="tiebreak" id="helytelen6/3">Australian Open</label><br>
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><span class="kerdesszam"> 7. kérdés:</span> Melyik országban található a "Tennis Hall of Fame" (Tenisz Hírességek Csarnoka), ahol a legnagyobb teniszezők vannak számontartva?</p>
+                        <p class="szabaly">Válaszd ki az egyetlen helyes választ!<br>
+                        <label><input type="checkbox" name="france" id="helytelen7/1"> Franciaország, Párizs</label><br>
+                        <label><input type="checkbox" name="usa" id="helyes7"> Egyesült Államok, Newport</label><br>
+                        <label><input type="checkbox" name="australia" id="helytelen7/2"> Ausztrália, Canberra</label><br>
+                        <label><input type="checkbox" name="uk" id="helytelen7/3"> Egyesült királyság, London</label><br>
+                        <br>
+                    </td>
+                    <td>
+                        <p><span class="kerdesszam"> 8. kérdés:</span> Melyik évben közvetítettek először teniszmérkőzést élőben a televízióban?</p>
+                        <label><input type="radio" name="televizio" id="helyes8">1937</label><br>
+                        <label><input type="radio" name="televizio" id="helytelen8/1">1945</label><br>
+                        <label><input type="radio" name="televizio" id="helytelen8/2">1951</label><br>
+                        <label><input type="radio" name="televizio" id="helytelen8/3">1960</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><span class="kerdesszam"> 9. kérdés: </span>Milyen hosszú egy hivatalos teniszpálya a férfi egyéni mérkőzéseken?</p>
+                        <input type="number" id="palya_hossz" min="20" max="25" step="1"><br>
+                    </td>
+                    <td>
+                        <p><span class="kerdesszam"> 10. kérdés:</span>Melyik teniszező dolgozott együtt a Wilson márkával, hogy kifejlesszen egy saját teniszütőt?</p>
+                        <p class="szabaly">Válaszd ki az egyetlen helyes választ!<br>
+                        <label><input type="checkbox" name="serena" id="helytelen10/1">Serena Williams</label><br>
+                        <label><input type="checkbox" name="rafael" id="helytelen10/2">Rafael Nadal</label><br>
+                        <label><input type="checkbox" name="novak" id="helytelen10/3">Novak Djokovic</label><br>
+                        <label><input type="checkbox" name="roger" id="helyes10">Roger Federer</label><br>
+                    </td>
+                </tr>
+            </table>
+            
+            <p>Ha úgy érzed elkészültél, akkor kattints az <input type="button" id="gomb" value="Ellenőrzés!"> gombra!</p>
+            <div class="pontszam" id="pontszam"></div><br>
+            <div class="visszajelzes" id="visszajelzes"> </div><br>
+        </article>
+    <footer>
+        <h4>Az oldal kizárólag oktatási célra készült! | Készítette: Sziva Dániel, 2024</h4>
+    </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
