@@ -3,7 +3,7 @@ A webfejlesztés tárgy beadandója
 
 Az oldal készítője: Sziva Dániel
 
-
+A weblapom az alábbi URL címen található: https://github.com/szivadaniel/webfejlesztes.git
 
 A weboldal célja a tenisz sportágának sokoldalú bemutatása, különös tekintettel annak történetére és híres játékosaira. 
 Az oldalon egy webshop is helyet kapott, amely kiváló minőségű teniszfelszereléseket és kiegészítőket kínál az érdeklődők számára.
