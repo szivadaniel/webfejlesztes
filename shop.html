@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sziva Dániel">
+    <meta name="description" content="Fedezd fel a tenisz izgalmas világát! Információk, kvíz, érdekességek a sport szerelmeseinek!">
+    <meta name="copyright" content="Az oldal kizárólag oktatási célra készült!">
+   
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sree+Krushnadevaraya&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="icon" href="Kepek/favicon.PNG" type="image/x-icon">
+    <script src="jquery-3.7.1.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function(){
+    $("#myform").validate({
+        rules: {
+        firstname: "required",
+        lastname: "required",
+        email: {
+        required: true,
+        email: true,
+        },
+        telefon: "required",
+        orszag: "required",
+        irszam: {
+            required: true,
+            digits: true,
+        },
+        varos: "required",
+        utca: "required",
+        ceg: "required",
+        adoszam: "required",
+        orszag2: "required",
+        irszam2: {
+            required: true,
+            digits: true,
+        },
+        varos2: "required",
+        utca2: "required",
+        atvetel: "required",
+        fizmod: "required",
+        regisztemail: {
+            required: true,
+            email: true,
+        },
+        password: {
+            required: true,
+            minlength: 9
+        },
+        elfogad: {
+            required: true,
+        },
+        datum: "required",
+        },
+
+        messages: {
+        firstname: " Írd be a keresztneved!",
+        lastname: " Írd be a vezetékneved!",
+        email: " írd be az e-mail címedet!",
+        telefon: " Írd be a telefonszámodat!",
+        orszag: " Írd be az ország nevét!",
+        irszam: {
+            required: " Add meg az irányítószámot!",
+            digits: " Számot adjál meg!"
+        },
+        varos: " Írd be a város nevét",
+        utca: " Írd be az utca nevét és a házszámot!",
+        ceg: " Írd be a cég nevét!",
+        adoszam: " Írd be az adószámot!",
+        orszag2: " Írd be az ország nevét!",
+        irszam2: {
+            required: " Add meg az irányítószámot!",
+            digits: " Számot adjál meg!"
+        },
+        varos2: " Írd be a város nevét",
+        utca2: " Írd be az utca nevét és a házszámot!",
+        atvetel: " Kérjük, válassz egy átvételi módot!",
+        fizmod: " Kérjük, válassz egy fizetési módot!",
+        regisztemail: " írd be az e-mail címedet!",
+        password: {
+            required: " Add meg a jelszavad!",
+            minlength: " A jelszavad legalább 8 karakter hosszú legyen!",
+        },
+        datum: " Az év és a hónap megadása kötelező!",
+        elfogad: " Kérlek fogadd el a vásárlási feltételeinket!" 
+    }
+    
+});
+});
+    </script>
+    <style>
+        label.error {
+        color: #FB3A3A;
+        }
+    </style>
+    <title>Webshop</title>
+
+</head>
+<body>
+    <header>
+        <h1>"Tenisz nélkül lehet élni, de nem érdemes!"🎾</h1>
+    </header>
+    <div class="container">
+        <nav> 
+            <ul> 
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="tortenet.html">Történet</a></li>
+                <li><a href="jatekosok.html">Híres játékosok</a></li>
+                <li><a class="active" href="#">-Shop-</a></li> 
+            </ul>
+        </nav>
+        <article>
+            <p class="focim">Lépj a pályára - Fedezd fel a teniszt! 🎾</p>
+            <h4 class="alcim">Üdvözlünk a teniszes webshopban!</h4>
+            <p class="tartalom"> Nálunk mindent megtalálsz, amire szükséged lehet, hogy a pályán a legjobb formádat hozd.
+                 Akár kezdőként vágnál bele, akár profi vagy, segítünk, hogy megtaláld a tökéletes felszerelést: ütők, labdák, táskák, kiegészítők és még sok más vár rád! Mi hiszünk benne, hogy a megfelelő eszközök nemcsak a játékot teszik élvezetesebbé, de segítenek a fejlődésben is!</p>
+            <p class="tartalom">Fedezd fel kínálatunkat, és lépj a pályára magabiztosan!</p>
+        </article>
+
+        <aside class="shop_szin">
+            <h2>Érdekesség!</h2>
+            <p class="shop_szoveg">Az első dokumentált teniszes bolt 1874-ben, Londonban nyílt, amikor a sportot Walter Clopton Wingfield angol tiszt népszerűsíteni kezdte modern formájában. 
+                Az üzlet célja az volt, hogy a játékosok számára ütőket, labdákat és egyéb alapvető kellékeket biztosítson. </p>
+        </aside>
+
+        <aside class="shop_adatlap">
+            <form action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" method="post" id="myform" novalidate>
+                <table class="shop_tablazat">
+                    <tr>
+                        <td colspan="2" class="shop_cella">A MEGRENDELÉS ADATAI</td>
+                    </tr>
+                    <tr>
+                        <td class="shop_cella">A MEGRENDELŐ (vásárló) ADATAI</td>
+                        <td class="shop_cella">SZÁLLÍTÁSI CÍM</td>
+                    </tr>
+                    <tr>
+                        <td class="adatok_cella">
+                            <p><label for="firstname">Keresztnév </label>
+                                <input type="text" class="textbox" name="firstname" id="firstname">
+                            </p>
+                            <p><label for="lastname">Vezetéknév</label>
+                                <input type="text" class="textbox" name="lastname" id="lastname">
+                            </p>
+                            <p><label for="email">Email cím </label>
+                                <input type="text" class="textbox" name="email" id="email">
+                                <br>
+                            </p>
+                            <p><label for="telefon">Telefonszám </label>
+                                <input type="text" class="textbox" name="telefon" id="telefon" placeholder="pl.:06201234567">
+                            </p>
+                        </td>
+                        <td class="adatok_cella">
+                            <p><label for="orszag">Ország: </label>
+                                <input type="text" class="textbox" name="orszag" id="orszag">
+                            </p>
+                            <p><label for="irszam">Irányítószám: </label>
+                                <input type="text" class="textbox" name="irszam" id="irszam">
+                            </p>
+                            <p><label for="varos">Város: </label>
+                                <input type="text" class="textbox" name="varos" id="varos">
+                            </p>
+                            <p><label for="utca">Utca, házszám: </label>
+                                <input type="text" class="textbox" name="utca" id="utca">
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  class="shop_cella">SZÁMLÁZÁSI ADATOK</td>
+                        <td  class="shop_cella">ÁTVÉTELI/FIZETÉSI MÓD</td>
+                    </tr>
+                    <tr>
+                        <td  class="adatok_cella">
+                            <br>
+                            <p><label for="ceg">A megrendelő cég neve: </label>
+                                <input type="text" class="textbox" name="ceg" id="ceg">
+                            </p>
+                            <p><label for="adoszam">Adószám: </label>
+                                <input type="text" class="textbox" name="adoszam" id="adoszam">
+                            </p>
+                            <p><label for="orszag2">Ország: </label>
+                                <input type="text" class="textbox" name="orszag2" id="orszag2">
+                            </p>
+                            <p><label for="irszam2">Irányítószám: </label>
+                                <input type="text" class="textbox" name="irszam2" id="irszam2">
+                            </p>
+                            <p><label for="varos2">Város: </label>
+                                <input type="text" class="textbox" name="varos2" id="varos2">
+                            </p>
+                            <p><label for="utca2">Utca, házszám: </label>
+                                <input type="text" class="textbox" name="utca2" id="utca2">
+                            </p>
+                        </td>
+                        <td>
+                            <h3>Átvétel módja:</h3>
+                            <p><label for="atvetel">Személyes átvétel </label>
+                                <input type="radio" name="atvetel" id="atvetel1">
+                            </p>
+                            <p><label for="atvetel">Futárszolgálat </label>
+                                <input type="radio" name="atvetel" id="atvetel2">
+                            </p>
+                            <h3>Fizetés módja:</h3>
+                            <p><label for="fizmod">Bankkártya </label>
+                                <input type="radio" name="fizmod" id="fizmod1">
+                            </p>
+                            <p><label for="atvetel">PayPal </label>
+                                <input type="radio" name="fizmod" id="fizmod2">
+                            </p>
+                            <p><label for="atvetel">Utánvétel </label>
+                                <input type="radio" name="fizmod" id="fizmod3">
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="shop_cella">MEGJEGYZÉS (a megrendelő kérése)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <br>
+                            <textarea class="megjegyzes">
+                            </textarea>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="shop_cella">A KOSÁR TARTALMA</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="adatok_cella">
+                            <p id="p1"></p>
+                            <p id="p2"></p>
+                            <p id="p3"></p>
+                            <p id="p4"></p>
+                            <p id="osszeg"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><br>
+                            <h2>A vásárláshoz regisztráció szükséges!</h2>
+                                
+                                <p><label for="regisztemail">Email cím: </label>
+                                    <input type="text" name="regisztemail" id="regisztemail">
+                                </p>
+                                <p><label for="password">Jelszó: </label>
+                                    <input type="password" name="password" id="password">
+                                </p>
+                                <p><label for="datum">Születési dátum: </label>
+                                    <input type="month" name="datum" id="datum">
+                                </p>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><br>
+                            <p><label for="elfogad">Elfogadom a vásárlási feltételeket!</label>
+                                <input type="checkbox" name="elfogad" id="elfogad">
+                            </p>
+                            <p><label for="hirlevel">Szeretnék feliratkozni a hírlevélre!</label>
+                                <input type="checkbox" name="hirlevel" id="hirlevel">
+                            </p>
+                            <p><input type="submit" value="Elküld"></p>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </aside>
+
+        <article class="termekek">
+           <h3>Áruházunk kínálata</h3>
+           <hr>
+           <p>Válassz a termékek közül, add meg a darabszámot majd helyezd a kosárba!</p>
+           <table class="termekek_tablazat">
+                <tr>
+                    <td>
+                        <br>
+                        <img src="Kepek/csukloszorito.PNG" alt="csukloszorito"><br>
+                        <a>Tenisz csuklópánt</a><br>
+                        <a>Ár: 1.790 Ft/db</a><br>
+                        <input type="number" min="0" step="1" placeholder="db" id="termek1">
+                        <input type="button" value="Kosárba" id="kosar1" onclick="termek_1()">
+                        <br>
+                    </td>
+                    <td>
+                        <br>
+                        <img src="Kepek/teniszuto.PNG" alt="teniszuto"><br>
+                        <a>Wilson pro staff teniszütő</a><br>
+                        <a>Ár: 22.980 Ft/db</a><br>
+                        <input type="number" min="0" step="1" placeholder="db" id="termek2">
+                        <input type="button" value="Kosárba" id="kosar2" onclick="termek_2()">
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        <br>
+                        <img src="Kepek/labdak.PNG" alt="teniszlabdak"><br>
+                        <a>US Open teniszladab (5 labda/doboz)</a><br> 
+                        <a>Ár: 2.550 Ft/db</a><br>
+                        <input type="number" min="0" step="1" placeholder="db" id="termek3">
+                        <input type="button" value="Kosárba" id="kosar3" onclick="termek_3()">
+                        <br>
+                    </td>
+                    <td>
+                        <br>
+                        <img src="Kepek/tenisztaska.PNG" alt="tenisztaska"><br> 
+                        <a>Head tenisztáska (2 rekeszes)</a><br>
+                        <a>Ár: 32.150 Ft/db</a><br>
+                        <input type="number" min="0" step="1" placeholder="db" id="termek4">
+                        <input type="button" value="Kosárba" id="kosar4" onclick="termek_4()">
+                        <br>
+                    </td>
+                </tr>
+            </table>
+            <input type="reset" value="Kosár tartalmának törlése" id="torles" onclick="kosar_torol()">
+        </article>
+    <footer>
+        <h4>Az oldal kizárólag oktatási célra készült! | Készítette: Sziva Dániel, 2024</h4>
+    </footer>
+    </div>
+
+</body>
+</html>
